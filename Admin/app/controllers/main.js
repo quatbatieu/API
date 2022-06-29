@@ -81,8 +81,12 @@ function addTeacher() {
   let ngonNgu = document.getElementById("loaiNgonNgu").value;
   let moTa = document.getElementById("MoTa").value;
   let hinhAnh = document.getElementById("HinhAnh").value;
+  const isValid = validation();
+
 
   // B2 : khởi tạo đối tượng Teacher
+  if(!isValid) return
+
   let teacher = new Teacher(
     null,
     taiKhoan,
@@ -105,7 +109,6 @@ function addTeacher() {
     .catch(function (error) {
       console.log(error);
     });
-    validation();
 }
 
 // Hàm xử lý gọi API xoá giáo viên
@@ -319,7 +322,7 @@ function validation() {
 
   // kiểm tra tài khoản nhân viên
   if (!isRequired(taiKhoan)) {
-    isValid = flase;
+    isValid = false;
     document.getElementById("TaiKhoan").innerHTML =
       "tài khoản không được để trống";
   } else {
@@ -370,7 +373,7 @@ function validation() {
 
   // kiểm tra hình ảnh nhân viên
   if (!isRequired(hinhAnh)) {
-    isValid = flase;
+    isValid = false;
     document.getElementById("HinhAnh").innerHTML =
       "hình ảnh không được để trống";
   } else {
@@ -379,7 +382,7 @@ function validation() {
 
   // kiểm tra loại người dùng
   if (loaiNguoiDung === "Chọn loại người dùng") {
-    isValid = flase;
+    isValid = false;
     document.getElementById("loaiNguoiDung").innerHTML = "bắt buộc phải chọn";
   } else {
     document.getElementById("loaiNguoiDung").innerHTML = "";
@@ -387,7 +390,7 @@ function validation() {
 
   // kiểm tra loại ngôn ngữ
   if(loaiNgonNgu === 'Chọn ngôn ngữ'){
-    isValid = flase;
+    isValid = false;
     document.getElementById("loaiNguoiDung").innerHTML = "bắt buộc phải chọn";
   } else {
     document.getElementById("loaiNguoiDung").innerHTML = "";
