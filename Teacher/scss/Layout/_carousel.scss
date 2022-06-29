@@ -1,0 +1,113 @@
+.carousel {
+  background-image: url(../../img/Violet_top_left_wave.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: $he-3;
+  position: relative;
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $pd-1;
+  }
+  .divide {
+    display: flex;
+    .col-left {
+      padding-left: $pd-6;
+      width: calc(100% / 2);
+      p {
+        color: $color-2;
+      }
+      h1 {
+        font-size: $fs-3;
+        font-weight: $fw-3;
+      }
+    }
+    img {
+      position: absolute;
+      bottom: $mg-2;
+    }
+  }
+  
+}
+@include responsive("small") {
+  .carousel{
+    height: 850px;
+    .container{
+      max-width: 576px;
+      .divide{
+        display: block;
+        .col-left{
+          width: calc(100% / 1);
+        }
+        img{
+          padding-top: 180px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+@include responsive("medium") {
+  .carousel{
+    height: 850px;
+    .container{
+      max-width: 768px;
+      .divide{
+        display: block;
+        .col-left{
+          width: calc(100% / 1);
+          h1{
+            font-size: 50px;
+          }
+        }
+        img{
+          padding-top: 180px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+@include responsive("large") {
+  .carousel{
+    height: 850px;
+    .container{
+      max-width: 992px;
+      .divide{
+        display: block;
+        .col-left{
+          width: calc(100% / 1);
+          h1{
+            font-size: 35px;
+          }
+        }
+        img{
+          padding-top: 180px;
+          position: relative;
+        }
+      }
+    }
+  }
+}
+@include responsive("extra-large") {
+  .carousel{
+    height: 850px;
+    .container{
+      max-width: 1200px;
+      .divide{
+        display: block;
+        .col-left{
+          width: calc(100% / 1);
+          h1{
+            font-size: 35px;
+          }
+        }
+        img{
+          padding-top: 180px;
+          position: relative;
+        }
+      }
+    }
+  }
+}

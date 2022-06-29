@@ -1,0 +1,130 @@
+.about {
+  background-color: $color-4;
+  height: $he-4;
+  position: relative;
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $pd-1;
+    text-align: center;
+    .row {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      // margin: 0 $mg-3;
+      box-sizing: border-box;
+      
+      .col-3 {
+        width: 21%;
+        padding: 0;
+        // padding: $pd-7 $pd-2;
+        margin-right: 40px;
+        margin-bottom: 40px ;
+        z-index: 1;
+        .styleImg{
+          overflow : hidden;
+          img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+          }
+          img:hover{
+            transform: scale(1.1);
+            transition: 1s all ease-in-out;
+          }
+        }
+        .text {
+          border-radius: 0 0 10px 10px;
+          background-color: $color-3;
+          padding: $pd-1 $pd-2;
+          // box-shadow: 20 20 50px gray;
+          p {
+            font-size: $fs-4;
+            color: $color-2;
+          }
+          h1 {
+            font-size: 25px;
+          }
+        }
+      }
+      .col-3:hover{
+        box-shadow: 20px 20px 50px grey;
+      }
+    }
+  }
+}
+.about::after{
+    content :'';
+    width: 100%;
+    height: 500px;
+    background: url(../../img/Wave_White_bottom_right_shape_01.png) center / cover no-repeat;
+    position: absolute;
+    bottom: $lh-3;
+    z-index: 0;
+}
+@include responsive("extra-large") {
+  .about{
+    height: 2000px;
+    .container{
+      max-width: 1200px;
+      .row{
+        .col-3{
+          width: 40%;
+        }
+      }
+    }
+  }
+  .about::after{
+    display: none;
+  }
+}
+@include responsive("large") {
+  .about{
+    height: 1900px;
+    .container{
+      max-width: 992px;
+      .row{
+        .col-3{
+          width: 40%;
+        }
+      }
+    }
+  }
+  .about::after{
+    display: none;
+  }
+}
+@include responsive("medium") {
+  .about{
+    height: 1650px;
+    .container{
+      max-width: 768px;
+      .row{
+        .col-3{
+          width: 40%;
+        }
+      }
+    }
+  }
+  .about::after{
+    display: none;
+  }
+}
+@include responsive("small") {
+  .about{
+    height: 1550px;
+    .container{
+      max-width: 576px;
+      .row{
+        .col-3{
+          width: 40%;
+        }
+      }
+    }
+  }
+  .about::after{
+    display: none;
+  }
+}
+
+
+

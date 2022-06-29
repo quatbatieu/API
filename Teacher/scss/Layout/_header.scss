@@ -1,0 +1,177 @@
+header {
+  background-image: url(../../img/yellow_top_wave_01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: $he-1;
+  .container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $pd-1;
+    .menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+      position: fixed;
+      .logo {
+        padding-left: $pd-2;
+        .logo .btCrest img {
+          width: $wi-1;
+        }
+      }
+      .menuPort {
+        font-size: $fs-1;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 200px;
+        .navbar a {
+          text-decoration: none;
+          padding-left: $pd-3;
+          font-size: $fs-2;
+          font-weight: $fw-4;
+          color: $color-1;
+          cursor: pointer;
+        }
+        .navbar a:hover {
+          color: $color-2;
+        }
+      }
+      button{
+        display: none;
+      }
+    }
+
+    .topBarInMenu .topBarInMenuCell {
+      line-height: $lh-1;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: $pd-1;
+      .btButtonWidget {
+        // background-color: $color-2;
+        cursor: pointer;
+        font-size: $fs-1;
+        line-height: $lh-2;
+        border: $bd-1 solid transparent;
+        border-radius: $br-1;
+        padding: $pd-4 $pd-1;
+        box-shadow: 0px 0px 100px $color-2 inset;
+        transition: all 0.3s ease-in-out;
+        a {
+          color: $color-3;
+        }
+        i {
+          font-size: $fs-1;
+          text-decoration: none;
+        }
+        .num {
+          font-size: $fs-1;
+          padding-left: $pd-5;
+        }
+        &:hover {
+          // @include styleButton($color-2, $color-3, $color-2);
+          box-shadow: 0 0 1px inset;
+          border: $bd-1 solid $color-2;
+          a {
+            color: $color-2;
+          }
+        }
+      }
+      .icon i {
+        margin-left: $fs-1;
+        font-size: $fs-2;
+        color: $color-1;
+        cursor: pointer;
+      }
+      .icon i:hover {
+        color: $color-2;
+      }
+    }
+  }
+}
+@include responsive("extra-large") {
+  .header {
+    height: 200px;
+    .container {
+      max-width: 1280px;
+      .menu {
+        .menuPort {
+          display: none;
+        }
+        .toggler {
+          display: block;
+          font-size: 20px;
+          position: absolute;
+          top: 50px;
+          right: -800px;
+        }
+      }
+    }
+  }
+}
+@include responsive("large") {
+  .header {
+    height: 200px;
+    .container {
+      max-width: 992px;
+      .menu {
+        .menuPort {
+          display: none;
+        }
+        .toggler {
+          display: block;
+          font-size: 20px;
+          position: absolute;
+          top: 50px;
+          right: -650px;
+        }
+      }
+    }
+  }
+}
+@include responsive("medium") {
+  .header {
+    height: 130px;
+    .container {
+      max-width: 768px;
+      .menu {
+        .menuPort {
+          display: none;
+        }
+        .toggler {
+          display: block;
+          font-size: 20px;
+          position: absolute;
+          top: 50px;
+          right: -500px;
+        }
+      }
+    }
+  }
+}
+@include responsive("small") {
+  .header {
+    height: 130px;
+    position: relative;
+    .container {
+      max-width: 576px;
+      .menu {
+        .menuPort {
+          display: none;
+        }
+        .toggler {
+          display: block;
+          font-size: 20px;
+          position: absolute;
+          top: 50px;
+          right: -360px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.find {
+  background-image: url(../../img/accent_bottom_wave_01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: $he-5;
+  position: relative;
+  padding-top: $pd-8;
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    .title {
+      padding-left: $pd-1;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+      border-radius: 20px;
+      padding: 65px 25px;
+      height: 90%;
+      margin-top: 20px;
+      width: 80%;
+      .above {
+        margin-bottom: 50px;
+      }
+      .btContactRow {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 1em;
+        .btContactName {
+          max-width: 50%;
+          padding-right: 1em;
+          position: relative;
+          @include styleInput;
+        }
+        .btContactEmail {
+          max-width: 50%;
+          position: relative;
+          @include styleInput;
+        }
+        .btContactList {
+          flex: 1 0 100%;
+          max-width: 100%;
+          position: relative;
+          .icon {
+            top: 0.9em;
+            position: absolute;
+            left: 1em;
+            line-height: 1;
+            z-index: 1;
+            color: $color-2;
+          }
+          .select {
+            z-index: 0;
+            position: relative;
+            width: 100%;
+            padding: 1em 1em 1em 3.5em;
+            font-size: 0.8em;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          }
+        }
+        .btContactMessage {
+          flex: 1 0 100%;
+          max-width: 100%;
+          position: relative;
+          .icon {
+            top: 1em;
+            position: absolute;
+            left: 1em;
+            line-height: 1;
+            z-index: 1;
+            color: $color-2;
+          }
+          textarea {
+            width: 100%;
+            border-radius: 20px;
+            z-index: 0;
+            padding: 1em 1em 1em 3.5em;
+            height: 90px;
+            line-height: 1.5;
+            font-size: 0.9em;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+      .btcontactButton {
+        padding-top: 25px;
+        max-width: 150px;
+        button {
+          font-size: 15px;
+          line-height: $lh-2;
+          border: $bd-1 solid transparent;
+          border-radius: 25px;
+          padding: 10px 60px;
+          box-shadow: 0px 0px 100px $color-2 inset;
+          transition: all 0.3s ease-in-out;
+          color: $color-3;
+          font-weight: 600;
+        }
+        button:hover{
+          box-shadow: 0 0 1px transparent inset;
+          border: $bd-1 solid $color-2;
+          color: $color-2;
+        }
+      }
+    }
+  }
+}
+@include responsive("extra-large"){
+  .find{
+    height: 800px;
+    .container{
+      max-width: 1280px;
+      .row{
+        .col-6{
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+@include responsive("large"){
+  .find{
+    height: 1200px;
+    .container{
+      max-width: 992px;
+      .row{
+        .col-6{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@include responsive("medium"){
+  .find{
+    height: 1200px;
+    .container{
+      max-width: 768px;
+      .row{
+        .col-6{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@include responsive("small"){
+  .find{
+    height: 1200px;
+    .container{
+      max-width: 576px;
+      .row{
+        .col-6{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+ 

@@ -1,0 +1,818 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about {
+  background-color: #dcd1f3;
+  height: 750px;
+  position: relative;
+}
+.about .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+  text-align: center;
+}
+.about .container .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.about .container .row .col-3 {
+  width: 21%;
+  padding: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+.about .container .row .col-3 .styleImg {
+  overflow: hidden;
+}
+.about .container .row .col-3 .styleImg img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.about .container .row .col-3 .styleImg img:hover {
+  transform: scale(1.1);
+  transition: 1s all ease-in-out;
+}
+.about .container .row .col-3 .text {
+  border-radius: 0 0 10px 10px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+}
+.about .container .row .col-3 .text p {
+  font-size: 0.75rem;
+  color: #b61984;
+}
+.about .container .row .col-3 .text h1 {
+  font-size: 25px;
+}
+.about .container .row .col-3:hover {
+  box-shadow: 20px 20px 50px grey;
+}
+
+.about::after {
+  content: "";
+  width: 100%;
+  height: 500px;
+  background: url(../../img/Wave_White_bottom_right_shape_01.png) center/cover no-repeat;
+  position: absolute;
+  bottom: -10px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .about {
+    height: 2000px;
+  }
+  .about .container {
+    max-width: 1200px;
+  }
+  .about .container .row .col-3 {
+    width: 40%;
+  }
+
+  .about::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .about {
+    height: 1900px;
+  }
+  .about .container {
+    max-width: 992px;
+  }
+  .about .container .row .col-3 {
+    width: 40%;
+  }
+
+  .about::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about {
+    height: 1650px;
+  }
+  .about .container {
+    max-width: 768px;
+  }
+  .about .container .row .col-3 {
+    width: 40%;
+  }
+
+  .about::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about {
+    height: 1550px;
+  }
+  .about .container {
+    max-width: 576px;
+  }
+  .about .container .row .col-3 {
+    width: 40%;
+  }
+
+  .about::after {
+    display: none;
+  }
+}
+.carousel {
+  background-image: url(../../img/Violet_top_left_wave.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 550px;
+  position: relative;
+}
+.carousel .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+.carousel .divide {
+  display: flex;
+}
+.carousel .divide .col-left {
+  padding-left: 15px;
+  width: 50%;
+}
+.carousel .divide .col-left p {
+  color: #b61984;
+}
+.carousel .divide .col-left h1 {
+  font-size: 60px;
+  font-weight: 700;
+}
+.carousel .divide img {
+  position: absolute;
+  bottom: 170px;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel {
+    height: 850px;
+  }
+  .carousel .container {
+    max-width: 576px;
+  }
+  .carousel .container .divide {
+    display: block;
+  }
+  .carousel .container .divide .col-left {
+    width: 100%;
+  }
+  .carousel .container .divide img {
+    padding-top: 180px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel {
+    height: 850px;
+  }
+  .carousel .container {
+    max-width: 768px;
+  }
+  .carousel .container .divide {
+    display: block;
+  }
+  .carousel .container .divide .col-left {
+    width: 100%;
+  }
+  .carousel .container .divide .col-left h1 {
+    font-size: 50px;
+  }
+  .carousel .container .divide img {
+    padding-top: 180px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 992px) {
+  .carousel {
+    height: 850px;
+  }
+  .carousel .container {
+    max-width: 992px;
+  }
+  .carousel .container .divide {
+    display: block;
+  }
+  .carousel .container .divide .col-left {
+    width: 100%;
+  }
+  .carousel .container .divide .col-left h1 {
+    font-size: 35px;
+  }
+  .carousel .container .divide img {
+    padding-top: 180px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .carousel {
+    height: 850px;
+  }
+  .carousel .container {
+    max-width: 1200px;
+  }
+  .carousel .container .divide {
+    display: block;
+  }
+  .carousel .container .divide .col-left {
+    width: 100%;
+  }
+  .carousel .container .divide .col-left h1 {
+    font-size: 35px;
+  }
+  .carousel .container .divide img {
+    padding-top: 180px;
+    position: relative;
+  }
+}
+.footer {
+  background-image: url(../../img/footer_background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.footer .title {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+.footer .title .thumb {
+  display: flex;
+}
+.footer .title .thumb .contact {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 25%;
+}
+.footer .title .thumb .contact h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 25px;
+}
+.footer .title .thumb .contact .contact-1 {
+  display: flex;
+  color: #ffffff;
+  font-size: 15px;
+}
+.footer .title .thumb .contact .contact-1 i {
+  padding-right: 1rem;
+}
+.footer .title .thumb .contact .contact-1 p {
+  margin-top: -5px;
+}
+.footer .title .thumb .contact .icon-1 {
+  padding-top: 15px;
+}
+.footer .title .thumb .contact .icon-1 a {
+  padding-right: 1rem;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer .title .thumb .contact .icon-1 a:hover {
+  color: black;
+}
+.footer .title .thumb .quick {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 25%;
+}
+.footer .title .thumb .quick h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 25px;
+  padding-bottom: 5px;
+}
+.footer .title .thumb .quick .quick-1 {
+  margin: 0;
+}
+.footer .title .thumb .quick .quick-1 li {
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  padding: 0.8em 0;
+}
+.footer .title .thumb .quick .quick-1 li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer .title .thumb .quick .quick-1 ul {
+  padding: 0;
+}
+.footer .title .thumb .quick .quick-1 ul a:hover {
+  opacity: 0.7;
+}
+.footer .title .thumb .aboutus {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 25%;
+}
+.footer .title .thumb .aboutus h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 25px;
+  padding-bottom: 5px;
+}
+.footer .title .thumb .aboutus .aboutus-1 {
+  margin: 0;
+}
+.footer .title .thumb .aboutus .aboutus-1 li {
+  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  line-height: 1;
+  padding: 0.8em 0;
+}
+.footer .title .thumb .aboutus .aboutus-1 li a {
+  font-size: 15px;
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer .title .thumb .aboutus .aboutus-1 ul {
+  padding: 0;
+}
+.footer .title .thumb .aboutus .aboutus-1 ul a:hover {
+  opacity: 0.7;
+}
+.footer .title .thumb .newsletter {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.footer .title .thumb .newsletter h1 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 25px;
+}
+.footer .title .thumb .newsletter .inputemail {
+  padding-bottom: 10px;
+  color: #ffffff;
+}
+.footer .title .thumb .newsletter .inputemail input {
+  text-align: center;
+  padding: 15px 25px;
+  height: 3em;
+  border-radius: 50px;
+  outline: none;
+  font: inherit;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  display: block;
+  color: inherit;
+  border: 1px solid #ffffff;
+}
+.footer .title .thumb .newsletter .inputemail input::-moz-placeholder {
+  color: #ffffff;
+}
+.footer .title .thumb .newsletter .inputemail input:-ms-input-placeholder {
+  color: #ffffff;
+}
+.footer .title .thumb .newsletter .inputemail input::placeholder {
+  color: #ffffff;
+}
+.footer .title .thumb .newsletter button {
+  font-size: 15px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 10px 80px;
+  box-shadow: 0px 0px 100px #ffffff inset;
+  transition: all 0.3s ease-in-out;
+  color: #000000;
+  font-weight: 600;
+}
+.footer .title .thumb .newsletter button:hover {
+  box-shadow: 0 0 1px #b61984 inset;
+  border: 1px solid #b61984;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 1280px) {
+  .footer .container {
+    max-width: 1280px;
+  }
+  .footer .container .title .thumb {
+    flex-wrap: wrap;
+  }
+  .footer .container .title .thumb .contact {
+    width: 50%;
+  }
+  .footer .container .title .thumb .aboutus {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer .container {
+    max-width: 992px;
+  }
+  .footer .container .title .thumb {
+    flex-wrap: wrap;
+  }
+  .footer .container .title .thumb .contact {
+    width: 40%;
+  }
+  .footer .container .title .thumb .aboutus {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer .container {
+    max-width: 768px;
+  }
+  .footer .container .title .thumb {
+    flex-wrap: wrap;
+  }
+  .footer .container .title .thumb .contact {
+    width: 42%;
+  }
+  .footer .container .title .thumb .aboutus {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .footer .container {
+    max-width: 576px;
+  }
+  .footer .container .title .thumb {
+    flex-wrap: wrap;
+  }
+  .footer .container .title .thumb .contact {
+    width: 60%;
+  }
+}
+header {
+  background-image: url(../../img/yellow_top_wave_01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 280px;
+}
+header .container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+header .container .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  position: fixed;
+}
+header .container .menu .logo {
+  padding-left: 20px;
+}
+header .container .menu .logo .logo .btCrest img {
+  width: 80px;
+}
+header .container .menu .menuPort {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 200px;
+}
+header .container .menu .menuPort .navbar a {
+  text-decoration: none;
+  padding-left: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+}
+header .container .menu .menuPort .navbar a:hover {
+  color: #b61984;
+}
+header .container .menu button {
+  display: none;
+}
+header .container .topBarInMenu .topBarInMenuCell {
+  line-height: 38px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+header .container .topBarInMenu .topBarInMenuCell .btButtonWidget {
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 5px 30px;
+  box-shadow: 0px 0px 100px #b61984 inset;
+  transition: all 0.3s ease-in-out;
+}
+header .container .topBarInMenu .topBarInMenuCell .btButtonWidget a {
+  color: #ffffff;
+}
+header .container .topBarInMenu .topBarInMenuCell .btButtonWidget i {
+  font-size: 13px;
+  text-decoration: none;
+}
+header .container .topBarInMenu .topBarInMenuCell .btButtonWidget .num {
+  font-size: 13px;
+  padding-left: 10px;
+}
+header .container .topBarInMenu .topBarInMenuCell .btButtonWidget:hover {
+  box-shadow: 0 0 1px inset;
+  border: 1px solid #b61984;
+}
+header .container .topBarInMenu .topBarInMenuCell .btButtonWidget:hover a {
+  color: #b61984;
+}
+header .container .topBarInMenu .topBarInMenuCell .icon i {
+  margin-left: 13px;
+  font-size: 15px;
+  color: #000000;
+  cursor: pointer;
+}
+header .container .topBarInMenu .topBarInMenuCell .icon i:hover {
+  color: #b61984;
+}
+
+@media screen and (max-width: 1280px) {
+  .header {
+    height: 200px;
+  }
+  .header .container {
+    max-width: 1280px;
+  }
+  .header .container .menu .menuPort {
+    display: none;
+  }
+  .header .container .menu .toggler {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    right: -800px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .header {
+    height: 200px;
+  }
+  .header .container {
+    max-width: 992px;
+  }
+  .header .container .menu .menuPort {
+    display: none;
+  }
+  .header .container .menu .toggler {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    right: -650px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 130px;
+  }
+  .header .container {
+    max-width: 768px;
+  }
+  .header .container .menu .menuPort {
+    display: none;
+  }
+  .header .container .menu .toggler {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    right: -500px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header {
+    height: 130px;
+    position: relative;
+  }
+  .header .container {
+    max-width: 576px;
+  }
+  .header .container .menu .menuPort {
+    display: none;
+  }
+  .header .container .menu .toggler {
+    display: block;
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    right: -360px;
+  }
+}
+.find {
+  background-image: url(../../img/accent_bottom_wave_01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
+  padding-top: 5em;
+}
+.find .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.find .container .title {
+  padding-left: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 65px 25px;
+  height: 90%;
+  margin-top: 20px;
+  width: 80%;
+}
+.find .container .title .above {
+  margin-bottom: 50px;
+}
+.find .container .title .btContactRow {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+}
+.find .container .title .btContactRow .btContactName {
+  max-width: 50%;
+  padding-right: 1em;
+  position: relative;
+}
+.find .container .title .btContactRow .btContactName i {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  line-height: 1;
+  z-index: 1;
+  color: #b61984;
+}
+.find .container .title .btContactRow .btContactName input {
+  padding: 1em 1em 1em 2.5em;
+  font-size: 0.8em;
+  height: 3em;
+  border-radius: 50px;
+  outline: none;
+  font: inherit;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  display: block;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.find .container .title .btContactRow .btContactEmail {
+  max-width: 50%;
+  position: relative;
+}
+.find .container .title .btContactRow .btContactEmail i {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  line-height: 1;
+  z-index: 1;
+  color: #b61984;
+}
+.find .container .title .btContactRow .btContactEmail input {
+  padding: 1em 1em 1em 2.5em;
+  font-size: 0.8em;
+  height: 3em;
+  border-radius: 50px;
+  outline: none;
+  font: inherit;
+  width: 100%;
+  background: transparent;
+  line-height: 1;
+  display: block;
+  color: inherit;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.find .container .title .btContactRow .btContactList {
+  flex: 1 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+.find .container .title .btContactRow .btContactList .icon {
+  top: 0.9em;
+  position: absolute;
+  left: 1em;
+  line-height: 1;
+  z-index: 1;
+  color: #b61984;
+}
+.find .container .title .btContactRow .btContactList .select {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  padding: 1em 1em 1em 3.5em;
+  font-size: 0.8em;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.find .container .title .btContactRow .btContactMessage {
+  flex: 1 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+.find .container .title .btContactRow .btContactMessage .icon {
+  top: 1em;
+  position: absolute;
+  left: 1em;
+  line-height: 1;
+  z-index: 1;
+  color: #b61984;
+}
+.find .container .title .btContactRow .btContactMessage textarea {
+  width: 100%;
+  border-radius: 20px;
+  z-index: 0;
+  padding: 1em 1em 1em 3.5em;
+  height: 90px;
+  line-height: 1.5;
+  font-size: 0.9em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.find .container .title .btcontactButton {
+  padding-top: 25px;
+  max-width: 150px;
+}
+.find .container .title .btcontactButton button {
+  font-size: 15px;
+  line-height: 30px;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  padding: 10px 60px;
+  box-shadow: 0px 0px 100px #b61984 inset;
+  transition: all 0.3s ease-in-out;
+  color: #ffffff;
+  font-weight: 600;
+}
+.find .container .title .btcontactButton button:hover {
+  box-shadow: 0 0 1px transparent inset;
+  border: 1px solid #b61984;
+  color: #b61984;
+}
+
+@media screen and (max-width: 1280px) {
+  .find {
+    height: 800px;
+  }
+  .find .container {
+    max-width: 1280px;
+  }
+  .find .container .row .col-6 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .find {
+    height: 1200px;
+  }
+  .find .container {
+    max-width: 992px;
+  }
+  .find .container .row .col-6 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .find {
+    height: 1200px;
+  }
+  .find .container {
+    max-width: 768px;
+  }
+  .find .container .row .col-6 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .find {
+    height: 1200px;
+  }
+  .find .container {
+    max-width: 576px;
+  }
+  .find .container .row .col-6 {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

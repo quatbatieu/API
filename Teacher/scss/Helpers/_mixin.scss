@@ -1,0 +1,59 @@
+@mixin styleInput {
+  i {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    line-height: 1;
+    z-index: 1;
+    color: $color-2;
+  }
+  input {
+    padding: 1em 1em 1em 2.5em;
+    font-size: 0.8em;
+    height: 3em;
+    border-radius: 50px;
+    outline: none;
+    font: inherit;
+    width: 100%;
+    background: transparent;
+    line-height: 1;
+    display: block;
+    color: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+@mixin styleA { // style chỗ contact
+  padding-left: 40px;
+  padding-right: 40px;
+  width: calc(100% / 4);
+}
+@mixin styleB { // style của thẻ h1
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: $color-3;
+  padding-bottom: 25px;
+}
+@mixin styleC{
+  li {
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    padding: 0.8em 0;
+    a{
+        font-size: 15px;
+        text-decoration: none;
+        color: $color-3;
+    }
+  }
+}
+@mixin responsive($screen) {   
+  @if(map-has-key($map:$breakpoints , $key:$screen )){      
+      $value: map-get($map:$breakpoints , $key:$screen );       
+      @media screen and (max-width:$value){
+          @content;
+      }
+  }
+  @else{       
+      @warn "màn hình chưa khai báo";
+  }
+}
