@@ -172,7 +172,7 @@ function resetForm() {
   document.getElementById("HinhAnh").value = "";
   document.getElementById("MoTa").value = "";
 
-  // $("#myModal").modal("hide");
+  $("#myModal").modal("hide");
 }
 
 // DOM tới button 'Thêm' để lắng nghe sự kiện addEventListener
