@@ -85,7 +85,9 @@ function addTeacher() {
 
 
   // B2 : khởi tạo đối tượng Teacher
-  if(!isValid) return
+  if(!isValid) {
+    return
+  }
 
   let teacher = new Teacher(
     null,
@@ -391,29 +393,39 @@ function validation() {
   // kiểm tra loại ngôn ngữ
   if(loaiNgonNgu === 'Chọn ngôn ngữ'){
     isValid = false;
-    document.getElementById("loaiNguoiDung").innerHTML = "bắt buộc phải chọn";
+    document.getElementById("loaiNgonNgu").innerHTML = "bắt buộc phải chọn";
   } else {
-    document.getElementById("loaiNguoiDung").innerHTML = "";
+    document.getElementById("loaiNgonNgu").innerHTML = "";
   }
 
   // kiểm tra mô tả có đúng định dạng hay không
-  let ibPx = new RegExp("{0,60}$");
   if (!isRequired(moTa)) {
     isValid = false;
     document.getElementById("MoTa").innerHTML = "mô tả không được để trống";
-  } else if (!ibPx.test(moTa)) {
+  }else if (!minLength(moTa, 60)) {
     isValid = false;
-    document.getElementById("MoTa").innerHTML = "mô tả phải có từ 0 - 60 kí tự";
-  } else {
-    // Đúng
+    document.getElementById("MoTa").innerHTML =
+      "mô tả có tối đa 60 kí tự";
+  }else{
     document.getElementById("MoTa").innerHTML = "";
   }
+
   return isValid
 }
+
 // Hàm kiểm tra input có rỗng hay không
 function isRequired(value) {
   if (!value) {
     return false;
   }
+  return true;
+}
+
+// Hàm kiểm tra input có đủ độ dài hay không
+function minLength(value, limit) {
+  if (value.length < limit) {
+    return false;
+  }
+
   return true;
 }
