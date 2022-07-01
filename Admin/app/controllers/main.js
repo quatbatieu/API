@@ -21,7 +21,7 @@ function mains() {
         teacher.hinhAnh
       );
     }
-    // Gọi hàm display để hiển thị danh sách sản phẩm ra giao diện
+    // Gọi hàm display để hiển thị danh sách giáo viên ra giao diện
     display(teachers);
   });
 }
@@ -81,12 +81,12 @@ function addTeacher() {
   let ngonNgu = document.getElementById("loaiNgonNgu").value;
   let moTa = document.getElementById("MoTa").value;
   let hinhAnh = document.getElementById("HinhAnh").value;
-  const isValid = validation();
-
+  validation();
+  idturn(taiKhoan);
 
   // B2 : khởi tạo đối tượng Teacher
-  if(!isValid) {
-    return
+  if (!isValid) {
+    return;
   }
 
   let teacher = new Teacher(
@@ -106,7 +106,6 @@ function addTeacher() {
     .then(function (result) {
       mains();
       resetForm();
-      
     })
     .catch(function (error) {
       console.log(error);
@@ -322,13 +321,13 @@ function validation() {
 
   let isValid = true;
 
-  // kiểm tra tài khoản nhân viên
+  // kiểm tra tài khoản giáo viên
   if (!isRequired(taiKhoan)) {
     isValid = false;
-    document.getElementById("TaiKhoan").innerHTML =
+    document.getElementById("TaiKhoanerror").innerHTML =
       "tài khoản không được để trống";
   } else {
-    document.getElementById("TaiKhoan").innerHTML = "";
+    document.getElementById("TaiKhoanerror").innerHTML = "";
   }
 
   // kiểm tra họ tên nhân viên
@@ -391,7 +390,7 @@ function validation() {
   }
 
   // kiểm tra loại ngôn ngữ
-  if(loaiNgonNgu === 'Chọn ngôn ngữ'){
+  if (loaiNgonNgu === "Chọn ngôn ngữ") {
     isValid = false;
     document.getElementById("loaiNgonNgu").innerHTML = "bắt buộc phải chọn";
   } else {
@@ -402,15 +401,14 @@ function validation() {
   if (!isRequired(moTa)) {
     isValid = false;
     document.getElementById("MoTa").innerHTML = "mô tả không được để trống";
-  }else if (!minLength(moTa, 60)) {
+  } else if (!minLength(moTa, 60)) {
     isValid = false;
-    document.getElementById("MoTa").innerHTML =
-      "mô tả có tối đa 60 kí tự";
-  }else{
+    document.getElementById("MoTa").innerHTML = "mô tả có tối đa 60 kí tự";
+  } else {
     document.getElementById("MoTa").innerHTML = "";
   }
 
-  return isValid
+  return isValid;
 }
 
 // Hàm kiểm tra input có rỗng hay không
@@ -429,3 +427,18 @@ function minLength(value, limit) {
 
   return true;
 }
+
+// hàm kiểm tra xem tài khoản có bị trùng không
+function idturn(taiKhoan) {
+  apiGetTeacher().then(function (result) {
+    let teachers = result.data;
+    const findId = teachers.find((value) => {
+      return value.taiKhoan === taiKhoan;
+    });
+  });
+  if (!findId) {
+    display(teachers);
+  } else alert("tài khoản bị trùng");
+}
+
+
