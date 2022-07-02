@@ -438,7 +438,8 @@ function idturn(taiKhoan) {
   });
   if (!findId) {
     display(teachers);
-  } else alert("tài khoản bị trùng");
+  } else {
+    alert("tài khoản bị trùng");
 }
-
+}
 
